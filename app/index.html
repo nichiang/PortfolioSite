@@ -1,40 +1,49 @@
 <!doctype html>
-<html class="no-js">
+<html>
   <head>
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
+
     <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
+    <link rel="stylesheet" href="styles/offcanvas.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:600,400' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
   </head>
   <body ng-app="portfolioSiteApp">
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+    <div class="container" ng-controller="MainCtrl as mainCtrl">
+      <div class="row row-offcanvas row-offcanvas-left" id="sidebar" role="navigation">
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas">
+          <ul class="nav-ul" dir="rtl">
+            <li class="nav-li nav-li-circle"><a href="#">Home</a></li>
+            <li>&nbsp;</li>
+            <li class="nav-li">UX Design</li>
+            <li class="nav-li nav-li-circle"><a href="#touch_hover">Touch Hover</a></li>
+            <li class="nav-li nav-li-circle"><a href="#ping_app">Ping App</a></li>
+            <li class="nav-li nav-li-circle"><a href="#adaptive_ux">Large Screen Adaptive UX</a></li>
+            <li class="nav-li nav-li-circle"><a href="#canvas_nav">Large Screen Canvas Nav</a></li>
+            <li class="nav-li nav-li-circle"><a href="#ppi_guidelines">Large Screen UX Guidelines</a></li>
+            <li>&nbsp;</li>
+            <li class="nav-li">Visual Design</li>
+            <li class="nav-li nav-li-circle">Branding Exercise</li>
+            <li class="nav-li nav-li-circle">Music Poster</li>
+            <li class="nav-li nav-li-circle">Logo Explorations</li>
+            <li>&nbsp;</li>
+            <li class="nav-li nav-li-circle">About</li>
+            <li>&nbsp;</li>
+            <li class="nav-li nav-li-circle">Resume</li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-9">
+          <p class="pull-left visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+          </p>
 
-    <!-- Add your site or application content here -->
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#">About</a></li>
-          <li><a ng-href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">portfolioSite</h3>
-      </div>
-
-      <div ng-include="'views/main.html'" ng-controller="MainCtrl"></div>
-
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+          <div ng-view></div>
+        </div>
       </div>
     </div>
 
@@ -50,26 +59,18 @@
        ga('send', 'pageview');
     </script>
 
-    <!-- build:js(.) scripts/oldieshim.js -->
     <!--[if lt IE 9]>
-    <script src="bower_components/es5-shim/es5-shim.js"></script>
-    <script src="bower_components/json3/lib/json3.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.0.3/es5-shim.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js"></script>
     <![endif]-->
-    <!-- endbuild -->
 
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0/angular.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0/angular-route.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0/angular-animate.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0/angular-touch.min.js"></script>
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <!-- endbuild -->
+    <script src="scripts/offcanvas.js"></script>
+    <script src="scripts/app.js"></script>
 </body>
 </html>

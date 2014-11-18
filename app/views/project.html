@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-xs-8" style="min-height: 70px;">
+    <h1>{{projectCtrl.currentProject.title}}</h1>
+  </div>
+  <div class="col-xs-2" style="min-height: 70px;">
+    <ul style="list-style-type: none; padding-left: 0px;">
+      <li class="skills-li" ng-repeat="role in projectCtrl.currentProject.roles">{{role}}</li>
+    </ul>
+  </div>
+  <div class="col-xs-2" style="min-height: 70px;">
+    <ul style="list-style-type: none; padding-left: 0px;">
+      <li class="skills-li" ng-repeat="skill in projectCtrl.currentProject.skills">{{skill}}</li>
+    </ul>
+  </div>
+</div>
+<div>
+  <p ng-repeat="desc in projectCtrl.currentProject.description">{{desc}}</p>
+</div>
+<div class="row">
+  <div class="col-xs-12 col-sm-6" ng-show="projectCtrl.hasIssues();">
+    <h2>Restrictions and Issues</h2>
+
+    <ul>
+      <li ng-repeat="issue in projectCtrl.currentProject.issues">{{issue}}</li>
+    </ul>
+  </div>
+  <div class="col-xs-12 col-sm-6" ng-show="projectCtrl.hasApproach();">
+    <h2>Approach and Solution</h2>
+
+    <ul>
+      <li ng-repeat="solution in projectCtrl.currentProject.approach">{{solution}}</li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-12 col-md-6" style="height: 300px; border: 1px solid silver">image</div>
+  <div class="col-sm-12 col-md-6" style="height: 300px; border: 1px solid silver">image</div>
+</div>
