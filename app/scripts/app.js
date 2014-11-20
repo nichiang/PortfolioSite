@@ -4,7 +4,7 @@
 
   var app = angular.module('portfolioSiteApp', ['ngAnimate', 'ngRoute', 'ngTouch']);
 
-  app.config(function($routeProvider) {
+  app.config(function($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -25,7 +25,7 @@
         controller: 'ProjectCtrl',
         controllerAs: 'projectCtrl'
       })
-      .when('/canvas_interactions', {
+      .when('/canvas_nav', {
         templateUrl: 'views/project.html',
         controller: 'ProjectCtrl',
         controllerAs: 'projectCtrl'
@@ -34,7 +34,24 @@
         templateUrl: 'views/project.html',
         controller: 'ProjectCtrl',
         controllerAs: 'projectCtrl'
+      })
+      .when('/branding_exercise', {
+        templateUrl: 'views/project.html',
+        controller: 'ProjectCtrl',
+        controllerAs: 'projectCtrl'
+      })
+      .when('/concert_poster', {
+        templateUrl: 'views/project.html',
+        controller: 'ProjectCtrl',
+        controllerAs: 'projectCtrl'
+      })
+      .when('/logo_explorations', {
+        templateUrl: 'views/project.html',
+        controller: 'ProjectCtrl',
+        controllerAs: 'projectCtrl'
       });
+
+    $locationProvider.html5Mode(true);
   });
 
   app.controller('MainCtrl', ['$rootScope', '$http', function ($rootScope, $http) {
@@ -46,17 +63,31 @@
   }]);
 
   app.controller('ProjectCtrl', ['$rootScope', '$location', function($rootScope, $location) {
-    console.log($location.path());
-
     this.currentProject = $rootScope.projects[$location.path().substring(1)];
 
+    this.hasRoles = function() {
+      return this.currentProject.roles !== undefined && this.currentProject.issues.length > 0;
+    };
+
+    this.hasSkills = function() {
+      return this.currentProject.skills !== undefined && this.currentProject.approach.length > 0;
+    };
+
     this.hasIssues = function() {
-      return this.currentProject.issues !== null && this.currentProject.issues.length > 0;
+      return this.currentProject.issues !== undefined && this.currentProject.issues.length > 0;
     };
 
     this.hasApproach = function() {
-      return this.currentProject.approach !== null && this.currentProject.approach.length > 0;
+      return this.currentProject.approach !== undefined && this.currentProject.approach.length > 0;
     };
   }]);
+
+  app.filter('arrayString', function() {
+    return function(input) {
+
+
+      return input.join(', ');
+    };
+  });
 
 })();

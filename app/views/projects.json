@@ -107,12 +107,37 @@
       "Program manager",
       "UX researcher"
     ],
-    "skills":[],
     "description":[
       "Large scale displays come with their own set of UX challenges and restrictions that aren't evidently when developing applications on laptop and desktop sized touch devices. On the Large Screen Experience, the recognition of this issue led to the creation of a set of guidelines for the development of apps for large scale displays.",
       "Topics covered in the document include the different scenarios for using large scale displays, controls placement, the use of colour and animation."
+    ]
+  },
+  "branding_exercise":{
+    "title":"Branding Exercise",
+    "skills":[
+      "Adobe Illustrator",
+      "Adobe Photoshop"
     ],
-    "issues":[],
-    "approach":[]
+    "description":[
+      "Branding assignment for CCT352, History and Practice of Design class, University of Toronto, 2005. Instrument company theme, includes a branding document and a product brochure design."
+    ]
+  },
+  "concert_poster":{
+    "title":"Concert Poster",
+    "skills":[
+      "Adobe Illustrator"
+    ],
+    "description":[
+      "Poster assignment for CCT352, History and Practice of Design class, University of Toronto, 2005. Music concert theme."
+    ]
+  },
+  "logo_explorations":{
+    "title":"Logo Explorations",
+    "skills":[
+      "Adobe Illustrator"
+    ],
+    "description":[
+      "Logo exploration labs for CCT204, Design Thinking 1 class, University of Toronto, 2005."
+    ]
   }
 }

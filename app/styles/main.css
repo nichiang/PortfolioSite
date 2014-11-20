@@ -1,11 +1,71 @@
-body {
-  background-color: #222 !important;
-  color: #ddd !important;
-  font-family: 'Open Sans', sans-serif !important;
+html, body {
+  height: 100%;
 }
 
-h1, h2 {
-  font-family: 'Roboto Condensed', sans-serif !important;
+body {
+  background-color: #222;
+  color: #ddd;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+.logo {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: xx-large;
+  border: 1px solid #555;
+  border-radius: 35px;
+  background-color: #333;
+  width: 71px;
+  height: 71px;
+  text-align: center;
+  line-height: 71px;
+}
+
+@media screen and (min-width: 768px) {
+  .logo:after {
+    content: '';
+    position: absolute;
+    top: 36px;
+    right: 25px;
+    width: 25px;
+    height: 1px;
+    background-color: #555;
+  }
+}
+
+.container-visual {
+  margin-bottom: 70px;
+}
+
+.container-visual:before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: -20px;
+  width: calc(100% + 20px);
+  height: calc(100% + 40px);
+  background-image: linear-gradient(to right, #555, #222 5%, #222 95%, #555);
+  border-radius: 2px;
+  z-index: -9;
+}
+
+.container-visual:after {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: -19px;
+  width: calc(100% + 18px);
+  height: calc(100% + 38px);
+  background-color: #222;
+  border-radius: 2px;
+  z-index: -8;
 }
 
 .nav-ul {
@@ -16,11 +76,11 @@ h1, h2 {
 .nav-ul:after {
   content: '';
   position: absolute;
-  right: 45px;
+  right: 25px;
   top: -30px;
-  width: 10px;
+  width: 1px;
   height: 150%;
-  border-right: 1px solid #555;
+  background-image: linear-gradient(to bottom, #222, #555 10%, #555 80%, #222);
   z-index: -10;
 }
 
@@ -29,13 +89,45 @@ h1, h2 {
 }
 
 .nav-li-circle:after {
-  content: '\f170';
+  content: '';
   position: absolute;
-  right: 40px;
+  margin-top: 5px;
+  right: 20px;
+  width: 11px;
+  height: 11px;
+  border: 1px solid #555;
+  border-radius: 5px;
   font-family: 'ionicons';
   background-color: #222;
 }
 
+.nav-li-circle:hover:after {
+  content: '';
+  position: absolute;
+  margin-top: 5px;
+  right: 20px;
+  width: 11px;
+  height: 11px;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-family: 'ionicons';
+  background-color: #222;
+}
+
+.skills-ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
 .skills-li {
+  font-size: small;
+  color: #337ab7;
+}
+
+.desc-ul {
+  padding-left: 20px;
+}
+
+.desc-li {
   font-size: small;
 }
