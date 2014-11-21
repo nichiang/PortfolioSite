@@ -75,6 +75,19 @@
       "Easy, single tap experience to manually report a user's location",
       "Ability to setup automatic timed posts to social media, reporting the user's position",
       "In areas where cellular reception is too low for a data connection, use SMS under the covers to report the user's position"
+    ],
+    "imageCaptions":[
+      "First launch screen. Allows users to link social media accounts to post to with Ping.",
+      "Main screen. Quick and easy for users to send a 'ping', posting on their current locations to their social networks.",
+      "Enabling 'AutoPing' will allow the app to post location notifications at specified intervals.",
+      "Scheduled 'AutoPings', for those times when users want to preemptively setup an AutoPing.",
+      "Settings page, allowing management of social network accounts, and setting up quiet times to avoid sending pings in the middle of the night."
+    ],
+    "embedCaptions":[
+      "Animation and transitions study."
+    ],
+    "embedLinks":[
+      "//www.youtube.com/embed/FkyfGLSEqU4?rel=0"
     ]
   },
   "touch_hover":{
@@ -85,7 +98,7 @@
     ],
     "skills":[
       "Processing",
-      "Leap Motion SDK"
+      "Leap Motion v2 SDK"
     ],
     "description":[
       "Touch points on touchscreens can be viewed as an inherently single bit operation - the touch is either on the screen or not. At the same time, gestural controls can feel too freeform due to its lack of haptic feedback.",
@@ -99,6 +112,12 @@
       "Used Leap Motion SDK to provide hover feedback for touch points",
       "Hover for more information - This is a common, accepted gesture when using mouse controls, but there is no analog for this when using touch",
       "Palm detection for stylus scenarios - By leveraging the Leap Motion's capability to see tools, palm rejection can be performed in a more intelligent way, leading to a more natural stylus experience (avoiding hacks like disabling all touch when a stylus is in hover range"
+    ],
+    "embedCaptions":[
+      "Demo of Processing prototype. The monitor used is not touch enabled; all hand and finger tracking done using Leap Motion controller. Open hand gesture brings up mock contextual menu."
+    ],
+    "embedLinks":[
+      "//www.youtube.com/embed/5FcQw4cDi7I?rel=0"
     ]
   },
   "ppi_guidelines":{
@@ -120,6 +139,16 @@
     ],
     "description":[
       "Branding assignment for CCT352, History and Practice of Design class, University of Toronto, 2005. Instrument company theme, includes a branding document and a product brochure design."
+    ],
+    "imageCaptions":[
+      "Cover of trifold product brochure.",
+      "Inside of trifold product brochure."
+    ],
+    "embedCaptions":[
+      "Branding guidelines document."
+    ],
+    "embedLinks":[
+      "https://www.scribd.com/embeds/247346381/content?start_page=1&view_mode=slideshow&access_key=key-Kkq6VmG5MISJ6FIgxAQV&show_recommendations=false"
     ]
   },
   "concert_poster":{
@@ -129,6 +158,9 @@
     ],
     "description":[
       "Poster assignment for CCT352, History and Practice of Design class, University of Toronto, 2005. Music concert theme."
+    ],
+    "imageCaptions":[
+      "Concert poster. Designed in Adobe Illustrator."
     ]
   },
   "logo_explorations":{
@@ -138,6 +170,29 @@
     ],
     "description":[
       "Logo exploration labs for CCT204, Design Thinking 1 class, University of Toronto, 2005."
+    ],
+    "imageCaptions":[
+      "Original logo design, with tagline.",
+      "Updated logo design, full colour.",
+      "Updated logo design, black and white.",
+      "Logo explorations",
+      "Letterhead based on updated logo design.",
+      "Business card based on updated logo design."
+    ]
+  },
+  "coffee_table":{
+    "title":"Coffee Table",
+    "skills":[
+      "SketchUp"
+    ],
+    "description":[
+      "Custom built coffee table. Initial ideation done using SketchUp. Legs constructed use Kee Klamps"
+    ],
+    "imageCaptions":[
+      "SketchUp model, top view.",
+      "SketchUp model, bottom view.",
+      "Completed coffee table, top view.",
+      "Completed coffee table, bottom view."
     ]
   }
 }

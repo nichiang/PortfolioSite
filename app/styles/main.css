@@ -131,3 +131,10 @@ li {
 .desc-li {
   font-size: small;
 }
+
+.caption {
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-style: italic;
+}

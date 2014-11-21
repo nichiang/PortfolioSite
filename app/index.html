@@ -8,12 +8,12 @@
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" type='text/css'>
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" type='text/css'>
-    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:600,400' type='text/css'>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:600,400,400italic' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="styles/offcanvas.css" type='text/css'>
     <link rel="stylesheet" href="styles/main.css" type='text/css'>
 
-    <base href="/">
+    <!-- <base href="/"> -->
   </head>
   <body ng-app="portfolioSiteApp">
     <div class="visible-xs" style="position: absolute; top: 10px; left: 10px;">
@@ -21,24 +21,27 @@
     </div>
     <div class="container" ng-controller="MainCtrl as mainCtrl">
       <div class="row row-offcanvas row-offcanvas-left" id="sidebar" role="navigation">
-        <div class="col-sm-3 sidebar-offcanvas">
+        <div class="col-sm-4 col-md-3 sidebar-offcanvas">
           <div style="float: right;">
             <ul class="nav-ul affix" dir="rtl" style="margin-left: -200px;">
               <li class="hidden-xs"><div class="logo">NC</div></li>
               <li>&nbsp;</li>
-              <li class="nav-li nav-li-circle"><a href="/">Home</a></li>
+              <li class="nav-li nav-li-circle"><a href="#">Home</a></li>
               <li>&nbsp;</li>
               <li class="nav-li">UX Design</li>
-              <li class="nav-li nav-li-circle"><a href="touch_hover">Touch Hover</a></li>
-              <li class="nav-li nav-li-circle"><a href="ping_app">Ping App</a></li>
-              <li class="nav-li nav-li-circle"><a href="adaptive_ux">Large Screen Adaptive UX</a></li>
-              <li class="nav-li nav-li-circle"><a href="canvas_nav">Large Screen Canvas Nav</a></li>
-              <li class="nav-li nav-li-circle"><a href="ppi_guidelines">Large Screen UX Guidelines</a></li>
+              <li class="nav-li nav-li-circle"><a href="#touch_hover">Touch Hover</a></li>
+              <li class="nav-li nav-li-circle"><a href="#ping_app">Ping App</a></li>
+              <li class="nav-li nav-li-circle"><a href="#adaptive_ux">Large Screen Adaptive UX</a></li>
+              <li class="nav-li nav-li-circle"><a href="#canvas_nav">Large Screen Canvas Nav</a></li>
+              <li class="nav-li nav-li-circle"><a href="#ppi_guidelines">Large Screen UX Guidelines</a></li>
               <li>&nbsp;</li>
               <li class="nav-li">Visual Design</li>
-              <li class="nav-li nav-li-circle"><a href="branding_exercise">Branding Exercise</a></li>
-              <li class="nav-li nav-li-circle"><a href="concert_poster">Concert Poster</a></li>
-              <li class="nav-li nav-li-circle"><a href="logo_explorations">Logo Explorations</a></li>
+              <li class="nav-li nav-li-circle"><a href="#branding_exercise">Branding Exercise</a></li>
+              <li class="nav-li nav-li-circle"><a href="#concert_poster">Concert Poster</a></li>
+              <li class="nav-li nav-li-circle"><a href="#logo_explorations">Logo Explorations</a></li>
+              <li>&nbsp;</li>
+              <li class="nav-li">Misc Projects</li>
+              <li class="nav-li nav-li-circle"><a href="#coffee_table">Coffee Table</a></li>
               <li>&nbsp;</li>
               <li class="nav-li nav-li-circle">About</li>
               <li>&nbsp;</li>
@@ -46,7 +49,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-sm-6 container-visual">
+        <div class="col-sm-8 col-md-7 col-lg-8 container-visual">
           <div ng-view></div>
         </div>
       </div>

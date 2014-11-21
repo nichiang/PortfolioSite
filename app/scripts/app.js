@@ -4,7 +4,16 @@
 
   var app = angular.module('portfolioSiteApp', ['ngAnimate', 'ngRoute', 'ngTouch']);
 
-  app.config(function($routeProvider, $locationProvider) {
+  app.config(function($routeProvider, $locationProvider, $sceDelegateProvider) {
+    $sceDelegateProvider.resourceUrlWhitelist([
+      // Allow same origin resource loads.
+      'self',
+      // Allow loading from outer templates domain.
+      'http://www.youtube.com/embed/**',
+      'https://www.youtube.com/embed/**',
+      'https://www.scribd.com/embeds/**'
+    ]); 
+
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -49,9 +58,14 @@
         templateUrl: 'views/project.html',
         controller: 'ProjectCtrl',
         controllerAs: 'projectCtrl'
+      })
+      .when('/coffee_table', {
+        templateUrl: 'views/project.html',
+        controller: 'ProjectCtrl',
+        controllerAs: 'projectCtrl'
       });
 
-    $locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(false);
   });
 
   app.controller('MainCtrl', ['$rootScope', '$http', function ($rootScope, $http) {
@@ -63,30 +77,40 @@
   }]);
 
   app.controller('ProjectCtrl', ['$rootScope', '$location', function($rootScope, $location) {
-    this.currentProject = $rootScope.projects[$location.path().substring(1)];
+    this.currentPath = $location.path().substring(1);
+    this.currentProject = $rootScope.projects[this.currentPath];
 
     this.hasRoles = function() {
-      return this.currentProject.roles !== undefined && this.currentProject.issues.length > 0;
+      return typeof this.currentProject.roles !== 'undefined' && this.currentProject.roles.length > 0;
     };
 
     this.hasSkills = function() {
-      return this.currentProject.skills !== undefined && this.currentProject.approach.length > 0;
+      return typeof this.currentProject.skills !== 'undefined' && this.currentProject.skills.length > 0;
     };
 
     this.hasIssues = function() {
-      return this.currentProject.issues !== undefined && this.currentProject.issues.length > 0;
+      return typeof this.currentProject.issues !== 'undefined' && this.currentProject.issues.length > 0;
     };
 
     this.hasApproach = function() {
-      return this.currentProject.approach !== undefined && this.currentProject.approach.length > 0;
+      return typeof this.currentProject.approach !== 'undefined' && this.currentProject.approach.length > 0;
+    };
+
+    this.hasImages = function() {
+      return typeof this.currentProject.imageCaptions !== 'undefined' && this.currentProject.imageCaptions.length > 0;
+    };
+
+    this.hasEmbeds = function() {
+      return typeof this.currentProject.embedCaptions !== 'undefined' && this.currentProject.embedCaptions.length > 0;
     };
   }]);
 
   app.filter('arrayString', function() {
     return function(input) {
-
-
-      return input.join(', ');
+      if (typeof input !== 'undefined')
+        return input.join(', ');
+      else
+        return "";
     };
   });
 

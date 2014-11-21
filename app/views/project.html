@@ -23,7 +23,17 @@
     </ul>
   </div>
 </div>
-<div class="row">
-  <div class="col-sm-12 col-md-6" style="height: 300px; border: 1px solid silver">image</div>
-  <div class="col-sm-12 col-md-6" style="height: 300px; border: 1px solid silver">image</div>
+<div class="row" ng-show="projectCtrl.hasImages();">
+  <div class="col-sm-12 col-md-6" ng-repeat="imageCaption in projectCtrl.currentProject.imageCaptions" style="padding: 10px;">
+    <img ng-src="images/{{projectCtrl.currentPath}}/image{{$index}}.jpg" style="width: 100%; border: 1px solid #333" />
+    <p class="caption">{{imageCaption}}</p>
+  </div>
+</div>
+<div class="row" ng-show="projectCtrl.hasEmbeds();">
+  <div ng-repeat="embedCaption in projectCtrl.currentProject.embedCaptions" style="padding: 10px;">
+    <div class="embed-responsive embed-responsive-4by3">
+      <iframe class="embed-responsive-item" ng-src="{{projectCtrl.currentProject.embedLinks[0]}}" width="100%"></iframe>
+    </div>
+    <p class="caption">{{embedCaption}}</p>
+  </div>
 </div>
