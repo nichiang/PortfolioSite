@@ -1,8 +1,8 @@
 <h2>{{projectCtrl.currentProject.title}}</h2>
 
 <ul class="skills-ul">
-  <li class="skills-li" ng-show="projectCtrl.hasRoles();">{{projectCtrl.currentProject.roles | arrayString}}</li>
-  <li class="skills-li" ng-show="projectCtrl.hasSkills();">{{projectCtrl.currentProject.skills | arrayString}}</li>
+  <li class="skills-li" ng-show="projectCtrl.hasRoles();">Role: {{projectCtrl.currentProject.roles | arrayString}}</li>
+  <li class="skills-li" ng-show="projectCtrl.hasSkills();">Skills: {{projectCtrl.currentProject.skills | arrayString}}</li>
 </ul>
 
 <p ng-repeat="desc in projectCtrl.currentProject.description">{{desc}}</p>

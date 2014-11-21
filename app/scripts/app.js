@@ -2,9 +2,9 @@
 
 (function(){
 
-  var app = angular.module('portfolioSiteApp', ['ngAnimate', 'ngRoute', 'ngTouch']);
+  var app = angular.module('portfolioSiteApp', ['ngAnimate', 'ngRoute']);
 
-  app.config(function($routeProvider, $locationProvider, $sceDelegateProvider) {
+  app.config(function($routeProvider, $locationProvider, $sceDelegateProvider, $compileProvider) {
     $sceDelegateProvider.resourceUrlWhitelist([
       // Allow same origin resource loads.
       'self',
@@ -66,14 +66,23 @@
       });
 
     $locationProvider.html5Mode(false);
+    $compileProvider.debugInfoEnabled(false);
   });
 
-  app.controller('MainCtrl', ['$rootScope', '$http', function ($rootScope, $http) {
+  app.controller('MainCtrl', ['$rootScope', '$http', '$location', function ($rootScope, $http, $location) {
     $rootScope.projects = [];
 
     $http.get('views/projects.json').success(function(data) {
       $rootScope.projects = data;
     });
+
+    this.activePage = function(currentPage) {
+      if ($location.path().substring(1) === currentPage) {
+        return 'active';
+      } else {
+        return '';
+      }
+    };
   }]);
 
   app.controller('ProjectCtrl', ['$rootScope', '$location', function($rootScope, $location) {
@@ -107,10 +116,11 @@
 
   app.filter('arrayString', function() {
     return function(input) {
-      if (typeof input !== 'undefined')
+      if (typeof input !== 'undefined') {
         return input.join(', ');
-      else
-        return "";
+      } else {
+        return '';
+      }
     };
   });
 
