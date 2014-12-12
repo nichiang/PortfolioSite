@@ -2,7 +2,7 @@
 
 (function(){
 
-  var app = angular.module('portfolioSiteApp', ['ngAnimate', 'ngRoute']);
+  var app = angular.module('portfolioSiteApp', ['ngAnimate', 'ngRoute', 'ngSanitize']);
 
   app.config(function($routeProvider, $locationProvider, $sceDelegateProvider, $compileProvider) {
     $sceDelegateProvider.resourceUrlWhitelist([
@@ -19,47 +19,7 @@
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/touch_hover', {
-        templateUrl: 'views/project.html',
-        controller: 'ProjectCtrl',
-        controllerAs: 'projectCtrl'
-      })
-      .when('/ping_app', {
-        templateUrl: 'views/project.html',
-        controller: 'ProjectCtrl',
-        controllerAs: 'projectCtrl'
-      })
-      .when('/adaptive_ux', {
-        templateUrl: 'views/project.html',
-        controller: 'ProjectCtrl',
-        controllerAs: 'projectCtrl'
-      })
-      .when('/canvas_nav', {
-        templateUrl: 'views/project.html',
-        controller: 'ProjectCtrl',
-        controllerAs: 'projectCtrl'
-      })
-      .when('/ppi_guidelines', {
-        templateUrl: 'views/project.html',
-        controller: 'ProjectCtrl',
-        controllerAs: 'projectCtrl'
-      })
-      .when('/branding_exercise', {
-        templateUrl: 'views/project.html',
-        controller: 'ProjectCtrl',
-        controllerAs: 'projectCtrl'
-      })
-      .when('/concert_poster', {
-        templateUrl: 'views/project.html',
-        controller: 'ProjectCtrl',
-        controllerAs: 'projectCtrl'
-      })
-      .when('/logo_explorations', {
-        templateUrl: 'views/project.html',
-        controller: 'ProjectCtrl',
-        controllerAs: 'projectCtrl'
-      })
-      .when('/coffee_table', {
+      .otherwise({
         templateUrl: 'views/project.html',
         controller: 'ProjectCtrl',
         controllerAs: 'projectCtrl'

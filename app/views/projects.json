@@ -10,7 +10,8 @@
     ],
     "description":[
       "Digital whiteboards often espouse the benefit of an infinite canvas. However, with unconfined pan and touch capabilities, and a lack of solid points of reference, users can easily become lost within the space. This problem is compounded when the experience is run on a large scale display.",
-      "This UX prototype explored ways to provide subtle navigation bounds and visual feedback to address this issue."
+      "This UX prototype explored ways to provide subtle navigation bounds and visual feedback to address this issue.",
+      "Prototype code available on <a href=\"https://github.com/nichiang/CanvasTouchProto\">GitHub</a>."
     ],
     "issues":[
       "Targeting large scale Perceptive Pixel (stylus and multi-touch enabled) displays",
@@ -23,6 +24,15 @@
       "Use bounded panning to keep at least a small portion of the user's content visible on the screen",
       "On screen zoom indicators, and snapped zoom levels, to give feedback of zoom state",
       "The ability to pull the canvas in all directions to bring the content to a comfortable writing level for the user"
+    ],
+    "imageCaptions":[
+      "Comparative scale of human figure versus UI elements. Zoom indicator centered on screen for increased visibility."
+    ],
+    "embedCaptions":[
+      "Zoom and pan touch interactions, UI feedback."
+    ],
+    "embedLinks":[
+      "//www.youtube.com/embed/dctMc0T7dek?rel=0"
     ]
   },
   "adaptive_ux":{
@@ -186,7 +196,7 @@
       "SketchUp"
     ],
     "description":[
-      "Custom built coffee table. Initial ideation done using SketchUp. Legs constructed use Kee Klamps"
+      "Custom built coffee table. Initial ideation done using SketchUp. Legs constructed using <a href='http://www.simplifiedbuilding.com/'>Kee Klamps</a>."
     ],
     "imageCaptions":[
       "SketchUp model, top view.",

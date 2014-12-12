@@ -140,7 +140,7 @@ li {
   position: relative;
 }
 
-.container-visual:before {
+/*.container-visual:before {
   content: '';
   position: absolute;
   left: 5px;
@@ -162,7 +162,7 @@ li {
   background-color: #222;
   border-radius: 2px;
   z-index: -8;
-}
+}*/
 
 .fixed-nav {
   margin-left: -250px; 
@@ -261,4 +261,9 @@ li {
   padding-left: 10px;
   padding-right: 10px;
   font-style: italic;
+}
+
+.contact-icon {
+  font-size: x-large;
+  margin-right: 10px;
 }

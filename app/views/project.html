@@ -5,7 +5,7 @@
   <li class="skills-li" ng-show="projectCtrl.hasSkills();">Skills: {{projectCtrl.currentProject.skills | arrayString}}</li>
 </ul>
 
-<p ng-repeat="desc in projectCtrl.currentProject.description">{{desc}}</p>
+<p ng-repeat="desc in projectCtrl.currentProject.description" ng-bind-html="desc"></p>
 
 <div class="row">
   <div class="col-xs-12 col-sm-6" ng-show="projectCtrl.hasIssues();">
