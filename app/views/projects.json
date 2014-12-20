@@ -87,6 +87,8 @@
       "In areas where cellular reception is too low for a data connection, use SMS under the covers to report the user's position"
     ],
     "imageCaptions":[
+      "Ideation page detailing overall functionality of the app, along with other potential features.",
+      "Rough sketches of the first launch and main screen.",
       "First launch screen. Allows users to link social media accounts to post to with Ping.",
       "Main screen. Quick and easy for users to send a 'ping', posting on their current locations to their social networks.",
       "Enabling 'AutoPing' will allow the app to post location notifications at specified intervals.",
@@ -131,14 +133,20 @@
     ]
   },
   "ppi_guidelines":{
-    "title":"Large Scale Display UX Guidelines",
+    "title":"App UX Guidelines for Large Scale Displays",
     "roles":[
       "Program manager",
       "UX researcher"
     ],
     "description":[
-      "Large scale displays come with their own set of UX challenges and restrictions that aren't evidently when developing applications on laptop and desktop sized touch devices. On the Large Screen Experience, the recognition of this issue led to the creation of a set of guidelines for the development of apps for large scale displays.",
-      "Topics covered in the document include the different scenarios for using large scale displays, controls placement, the use of colour and animation."
+      "Large scale Perceptive Pixel displays come with their own set of UX challenges and restrictions that aren't evidently when developing applications on laptop and desktop sized touch devices. On the Large Screen Experience team at Microsoft, the recognition of these issues led me to create a set of UX guidelines for apps that target large scale displays.",
+      "Topics covered in the document include the different scenarios for using large scale displays, human factors, controls placement, the use of colour and animation."
+    ],
+    "embedCaptions":[
+      "Designing Windows Store apps for Perceptive Pixel displays."
+    ],
+    "embedLinks":[
+      "https://onedrive.live.com/embed?cid=70B09D2C8931C9B9&resid=70B09D2C8931C9B9%2142620&authkey=AJBQSZxAfXiQrjI&em=2"
     ]
   },
   "branding_exercise":{
@@ -158,7 +166,7 @@
       "Branding guidelines document."
     ],
     "embedLinks":[
-      "https://www.scribd.com/embeds/247346381/content?start_page=1&view_mode=slideshow&access_key=key-Kkq6VmG5MISJ6FIgxAQV&show_recommendations=false"
+      "https://onedrive.live.com/embed?cid=70B09D2C8931C9B9&resid=70B09D2C8931C9B9%2142621&authkey=AMGMBF9DcNHDRcU&em=2"
     ]
   },
   "concert_poster":{

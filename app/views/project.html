@@ -24,10 +24,19 @@
   </div>
 </div>
 <div class="row" ng-show="projectCtrl.hasImages();">
-  <div class="col-sm-12 col-md-6" ng-repeat="imageCaption in projectCtrl.currentProject.imageCaptions" style="padding: 10px;">
-    <img ng-src="images/{{projectCtrl.currentPath}}/image{{$index}}.jpg" style="width: 100%; border: 1px solid #333" />
+  <div class="col-sm-12 col-md-6" ng-repeat-start="imageCaption in projectCtrl.currentProject.imageCaptions" style="padding: 10px;">
+    <a ng-click="projectCtrl.toggleGallery($index)">
+      <img ng-src="images/{{projectCtrl.currentPath}}/image{{$index}}.jpg" style="width: 100%; border: 1px solid #333" />
+    </a>
     <p class="caption">{{imageCaption}}</p>
   </div>
+  <div ng-show="projectCtrl.showImage[$index]" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; background-color: black; overflow: auto; text-align: center; z-index: 100;">
+    <a ng-click="projectCtrl.closeGallery()">
+      <i class="ion-ios7-close-outline" style="position: absolute; top: 0px; right: 0px; font-size: xx-large; margin: 5px;"></i>
+    </a>
+    <img ng-src="images/{{projectCtrl.currentPath}}/image{{$index}}.jpg" style="margin: 20px;" />
+  </div>
+  <div ng-repeat-end class="clearfix" ng-if="$odd"></div>
 </div>
 <div class="row" ng-show="projectCtrl.hasEmbeds();">
   <div ng-repeat="embedCaption in projectCtrl.currentProject.embedCaptions" style="padding: 10px;">

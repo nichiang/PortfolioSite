@@ -4,14 +4,15 @@
 
   var app = angular.module('portfolioSiteApp', ['ngAnimate', 'ngRoute', 'ngSanitize']);
 
-  app.config(function($routeProvider, $locationProvider, $sceDelegateProvider, $compileProvider) {
+  app.config(function($routeProvider, $sceDelegateProvider, $compileProvider) {
     $sceDelegateProvider.resourceUrlWhitelist([
       // Allow same origin resource loads.
       'self',
       // Allow loading from outer templates domain.
       'http://www.youtube.com/embed/**',
       'https://www.youtube.com/embed/**',
-      'https://www.scribd.com/embeds/**'
+      'https://www.scribd.com/embeds/**',
+      'https://onedrive.live.com/**'
     ]); 
 
     $routeProvider
@@ -25,7 +26,6 @@
         controllerAs: 'projectCtrl'
       });
 
-    $locationProvider.html5Mode(false);
     $compileProvider.debugInfoEnabled(false);
   });
 
@@ -48,6 +48,21 @@
   app.controller('ProjectCtrl', ['$rootScope', '$location', function($rootScope, $location) {
     this.currentPath = $location.path().substring(1);
     this.currentProject = $rootScope.projects[this.currentPath];
+    this.showImage = [];
+    
+    this.closeGallery = function() {
+      if (typeof this.currentProject.imageCaptions !== 'undefined') {
+        for (var i = 0; i < this.currentProject.imageCaptions.length; i++) {
+          this.showImage[i] = false;
+        }
+      }
+    };
+
+    this.closeGallery();
+
+    this.toggleGallery = function(imageId) {
+      this.showImage[imageId] = !this.showImage[imageId];
+    };
 
     this.hasRoles = function() {
       return typeof this.currentProject.roles !== 'undefined' && this.currentProject.roles.length > 0;
