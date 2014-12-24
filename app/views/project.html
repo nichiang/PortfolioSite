@@ -2,7 +2,7 @@
 
 <ul class="skills-ul">
   <li class="skills-li" ng-show="projectCtrl.hasRoles();">Role: {{projectCtrl.currentProject.roles | arrayString}}</li>
-  <li class="skills-li" ng-show="projectCtrl.hasSkills();">Skills: {{projectCtrl.currentProject.skills | arrayString}}</li>
+  <li class="skills-li" ng-show="projectCtrl.hasSkills();">Skills/Tools: {{projectCtrl.currentProject.skills | arrayString}}</li>
 </ul>
 
 <p ng-repeat="desc in projectCtrl.currentProject.description" ng-bind-html="desc"></p>
