@@ -132,6 +132,45 @@
       "//www.youtube.com/embed/5FcQw4cDi7I?rel=0"
     ]
   },
+  "jaunt_vr_app":{
+    "title":"Mobile VR Design: Jaunt VR App",
+    "roles":[
+      "Lead UX designer",
+      "Prototyper",
+      "Unity Frontend Developer"
+    ],
+    "skills":[
+      "Unity",
+      "C#",
+      "VR Prototyping"
+    ],
+    "description":[
+      "The Jaunt VR app is a library for 360 video content, designed to work on a range of VR devices from smartphones with Google Cardboard, to Oculus Rift and HTC Vive desktop HMDs.",
+      "There were numerous challenges to overcome when we designed this app from the ground up - a low minimum baseline device with no button input, a lack of existing design patterns that users understand, the need to create an experience approachable by users new to the medium of VR. Tackling this involved much experimentation and prototyping, during which we also developed many new VR focused prototyping tools and processes (mostly around Unity). We went through multiple iterations and rounds of user testing to arrive at the experience that was shipped to consumers.",
+      "The Jaunt VR app is available for download on these platforms: <a href=\"https://play.google.com/store/apps/details?id=com.jauntvr.android.player.cardboard&hl=en\">Android (Cardboard)</a>, <a href=\"https://itunes.apple.com/us/app/jaunt-vr-experience-cinematic/id1048352748?mt=8\">iOS (Cardboard)</a>, GearVR, <a href=\"https://www2.oculus.com/experiences/app/975339039170122/\">Oculus Rift</a>, <a href=\"http://store.steampowered.com/app/456450/\">HTC Vive</a>"
+    ],
+    "issues":[
+      "No guarantee of a trigger for user input - Not having a button and relying solely on the user's gaze became the baseline target for the experience",
+      "No standard control paradigms - All standard controls found on web, mobile and desktop experiences rely on having a keyboard, mouse or touchscreen to signal the user's intent",
+      "No standards for visual hierarchy in an immersive 3D space - There's no longer an 'edge of the screen' that can be relied on to visually anchor content and controls to"
+    ],
+    "approach":[
+      "Designed a gaze based button that triggers after looking at it for a set amount of time, signaling user intent",
+      "On content thumbnails, a two-state hover mechanism surfaces a separate selection button to avoid accidental selection issues",
+      "Designed a mechanism for activating playback controls in a 360 video that takes up the entire view",
+      "Developed a visual hierarchy for laying out content and controls - Global navigation gets anchored towards the ground (less neck strain than above), while content gets anchored around the horizon",
+      "Developed a set of guidelines for 3D asset placement, focused on keeping content readable in HMD, visible within different FOVs of different headsets, and ensuring the objects were comfortably positioned and integrated with the background environment",
+      "Created hardware input mappings that correspond to platform defaults - Ex. tapping on the trackpad for selection on the GearVR versus pulling the trigger on a Vive controller",
+      "Designed a toggleable VR/2D mode for smartphones users without a Google Cardboard"
+    ],
+    "imageCaptions":[
+      "The initial Home world that users arrive at",
+      "The gaze timer mechanism on a button",
+      "The playback controls trigger button following the user's view",
+      "The playback controls when activated",
+      "The 2D mode view of the app for smartphone users without a Google Cardboard"
+    ]
+  },
   "ppi_guidelines":{
     "title":"App UX Guidelines for Large Scale Displays",
     "roles":[
