@@ -259,19 +259,28 @@ AddDefaultCharset utf-8
 # | HTML 5 mode rewrites                                                       |
 # ------------------------------------------------------------------------------
 
-<IfModule mod_rewrite.c>
-  # Don't rewrite files or directories
-  RewriteCond %{REQUEST_FILENAME} -f [OR]
-  RewriteCond %{REQUEST_FILENAME} -d
-  RewriteRule ^ - [L]
+#<IfModule mod_rewrite.c>
+#  # Don't rewrite files or directories
+#  RewriteCond %{REQUEST_FILENAME} -f [OR]
+#  RewriteCond %{REQUEST_FILENAME} -d
+#  RewriteRule ^ - [L]
 
-  # Rewrite everything else to index.html to allow html5 state links
-  RewriteRule ^ index.html [L]
-</IfModule>
+#  # Rewrite everything else to index.html to allow html5 state links
+#  RewriteRule ^ index.html [L]
+#</IfModule>
 
 # ##############################################################################
 # # SECURITY                                                                   #
 # ##############################################################################
+
+# ------------------------------------------------------------------------------
+# | Blocking Bots                                                              |
+# ------------------------------------------------------------------------------
+
+SetEnvIfNoCase Referer darodar.com spambot=yes
+Order allow,deny
+Allow from all
+Deny from env=spambot
 
 # ------------------------------------------------------------------------------
 # | Content Security Policy (CSP)                                              |

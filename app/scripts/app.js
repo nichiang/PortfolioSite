@@ -2,7 +2,7 @@
 
 (function(){
 
-  var app = angular.module('portfolioSiteApp', ['ngAnimate', 'ngRoute', 'ngSanitize']);
+  var app = angular.module('portfolioSiteApp', ['ngAnimate', 'ngRoute', 'ngSanitize', 'angulartics', 'angulartics.google.analytics']);
 
   app.config(function($routeProvider, $sceDelegateProvider, $compileProvider) {
     $sceDelegateProvider.resourceUrlWhitelist([
@@ -28,6 +28,15 @@
 
     $compileProvider.debugInfoEnabled(false);
   });
+
+  app.run(['$rootScope', '$location', '$window', function($rootScope, $location, $window) {
+    $rootScope.$on('$routeChangeSuccess', function() {
+      if (!$window.ga)
+        return;
+
+      $window.ga('send', 'pageview', { page: $location.path() });
+    });
+  }]);
 
   app.controller('MainCtrl', ['$rootScope', '$http', '$location', function ($rootScope, $http, $location) {
     $rootScope.projects = [];
